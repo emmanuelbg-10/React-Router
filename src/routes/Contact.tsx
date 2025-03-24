@@ -19,7 +19,7 @@ export default function Contact() {
   }
 
   return (
-    <div>
+    <div className="content">
       <h1>{contact.name}</h1>
       <p>{contact.telephone}</p>
       <p>{contact.favorite ? "favorite" : "Regular Contact"}</p>

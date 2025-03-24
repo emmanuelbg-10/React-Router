@@ -4,7 +4,7 @@ import { items } from "../data/items";
 
 export default function Home() {
   return (
-    <div>
+    <div className="layout">
       <Menu />
 
       <div className="mainContainer">
@@ -15,7 +15,10 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <Outlet />
+
+        <div className="content">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
