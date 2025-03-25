@@ -1,28 +1,14 @@
-import { useParams } from "react-router-dom";
-import { useMemo } from "react";
-import { getContact } from "../data/items";
+import { useOutletContext } from "react-router-dom";
 
-type ContactParams = {
-  contactid?: string; // Parámetro opcional
-};
+type ContextType = { user?: string };
 
 export default function Contact() {
-  const params = useParams<ContactParams>();
-
-  const contact = useMemo(() => {
-    if (!params.contactid) return null; // Evita pasar `undefined`
-    return getContact(params.contactid);
-  }, [params.contactid]);
-
-  if (!contact) {
-    throw new Error("El contacto no existe");
-  }
+  const { user } = useOutletContext<ContextType>();
 
   return (
     <div className="content">
-      <h1>{contact.name}</h1>
-      <p>{contact.telephone}</p>
-      <p>{contact.favorite ? "favorite" : "Regular Contact"}</p>
+      <h1>Detalles del contacto</h1>
+      <p>Nombre del usuario: {user || "Desconocido"}</p>
     </div>
   );
 }

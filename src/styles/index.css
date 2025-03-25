@@ -1,3 +1,4 @@
+/* Variables y estilos base */
 :root {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -9,7 +10,13 @@
 /* Reset básico */
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
 }
 
 /* Navbar */
@@ -51,7 +58,7 @@ nav ul li a:hover {
   background-color: #eee;
   padding: 15px;
   height: 100vh;
-  overflow-y: 0 auto;
+  overflow-y: auto;
   flex-shrink: 0;
 }
 
@@ -64,9 +71,7 @@ nav ul li a:hover {
   justify-content: flex-start;
   text-align: left;
   padding: 20px;
-  max-width: calc(
-    100vw - 475px
-  ); /* Ajusta el ancho máximo restando el sidebar */
+  max-width: calc(100vw - 475px);
 }
 
 /* Links en Sidebar */
@@ -82,10 +87,35 @@ nav ul li a:hover {
   background-color: #ddd;
 }
 
-/* Estilos del Contenido */
+/* Estilos de contenido */
 h1 {
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
+}
+
+a {
+  font-size: 14px;
+  color: #666;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #111;
+}
+
+input,
+textarea,
+button {
+  outline: none;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  text-align: center;
 }

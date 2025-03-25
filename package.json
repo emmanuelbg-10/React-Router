@@ -8,11 +8,12 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "docker:start": "docker start react-router",
-    "docker:stop": "docker stop react-router",
-    "docker:logs": "docker logs -f react-router"
+    "docker:start": "docker start react-jwt",
+    "docker:stop": "docker stop react-jwt",
+    "docker:logs": "docker logs -f react-jwt"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.4.0"
